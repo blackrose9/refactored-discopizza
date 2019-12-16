@@ -2,6 +2,7 @@ header{
    background-image: url(../img/discobkg.jfif);
    background-size: cover;
    height: 100%;
+   margin-bottom: 2%;
 }
 #headertext{
    color: white;

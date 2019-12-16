@@ -10,32 +10,40 @@
 </head>
 <body>
    <header>
-      <h1>DiscoPizza</h1>
-      <p>...A party in your mouth...</p>
+      <div id="headertext">
+         <h1>DiscoPizza</h1>
+         <p>...A party in your mouth...</p>
+      </div>
    </header>
-   <section>
+   <section class="container-fluid">
+      <div class="form-inline">
+         <label class="col-sm-12 col-md-3">Size</label>
+         <label class="col-sm-12 col-md-3">Toppings</label>
+         <label class="col-sm-12 col-md-3">Crust</label>
+         <label class="col-sm-12 col-md-3">How many do you want?</label>
+      </div>
       <form class=" form-group form-inline">
-         <label>Size</label>
-         <select>
+         
+         <select class="col-sm-12 col-md-3">
             <option>Small</option>
             <option>Medium</option>
             <option>Large</option>
          </select>
-         <label>Toppings</label>
-         <select>
+         
+         <select class="col-sm-12 col-md-3">
             <option>Vegetables...</option>
             <option>Hawaiian</option>
             <option>Beef</option>
             <option>Chicken :P</option>
          </select>
-         <label>Crust</label>
-         <select>
+         
+         <select class="col-sm-12 col-md-3">
             <option>Crispy</option>
             <option>Stuffed</option>
             <option>Gluten-free</option>
          </select>
-         <label>How many do you want?</label>
-         <input type="number" value="Qty">
+         
+         <input type="number" value="Qty" class="col-sm-12 col-md-3">
          <button value="">Another type of Pizza?</button>
       </form>
       <article>
@@ -48,5 +56,6 @@
          </div>
       </article>
    </section>
+
 </body>
 </html>

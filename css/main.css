@@ -1,0 +1,10 @@
+header{
+   background-image: url(../img/discobkg.jfif);
+   background-size: cover;
+   height: 100%;
+}
+#headertext{
+   color: white;
+   text-align: center;
+   padding: 10%;
+}

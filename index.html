@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>DiscoPizza</title>
+   <link rel="stylesheet" href="./css/bootstrap.css"/>
+   <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+   <header>
+      <h1>DiscoPizza</h1>
+      <p>...A party in your mouth...</p>
+   </header>
+   <section>
+      <form class=" form-group form-inline">
+         <label>Size</label>
+         <select>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+         </select>
+         <label>Toppings</label>
+         <select>
+            <option>Vegetables...</option>
+            <option>Hawaiian</option>
+            <option>Beef</option>
+            <option>Chicken :P</option>
+         </select>
+         <label>Crust</label>
+         <select>
+            <option>Crispy</option>
+            <option>Stuffed</option>
+            <option>Gluten-free</option>
+         </select>
+         <label>How many do you want?</label>
+         <input type="number" value="Qty">
+         <button value="">Another type of Pizza?</button>
+      </form>
+      <article>
+         <h2>Your order</h2>
+         <div>
+            <h3 id="displayqty" class="col-sm-12 col-md-3"></h3>
+            <h3 id="displaycrust" class="col-sm-12 col-md-3"></h3>
+            <h3 id="displaysize" class="col-sm-12 col-md-3"></h3>
+            <h3 id="displaytopping" class="col-sm-12 col-md-3"></h3>
+         </div>
+      </article>
+   </section>
+</body>
+</html>

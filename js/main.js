@@ -1,12 +1,6 @@
-function Pizza(size, toppings, crust, ) {
-   this.crust = crust;
-   this.size = size;
-   this.toppings = toppings;
-}
-//Jquery pick user input from form
-
 $(document).ready(function() {
    $("#order form").submit(function(event) {
+      debugger;
       var sizeInput = document.getElementById("size");
       var size = sizeInput.options[sizeInput.selectedIndex].text;
 
@@ -18,6 +12,11 @@ $(document).ready(function() {
 
       var qty = parseInt ($("input#qty").val());
 
+      // alert(size);
+      // alert(topping);
+      // alert(crust);
+      // alert(qty);
+      
       //Jquery append users order
       $("#displayqty").append(qty);
       $("#displaycrust").append(crust);
@@ -29,3 +28,10 @@ $(document).ready(function() {
       event.preventDefault();
   });
 });
+
+// function Pizza(size, toppings, crust, ) {
+//    this.crust = crust;
+//    this.size = size;
+//    this.toppings = toppings;
+// }
+//Jquery pick user input from form

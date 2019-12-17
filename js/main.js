@@ -1,6 +1,5 @@
 $(document).ready(function() {
    $("#order form").submit(function(event) {
-      debugger;
       var sizeInput = document.getElementById("size");
       var size = sizeInput.options[sizeInput.selectedIndex].text;
 
@@ -22,10 +21,19 @@ $(document).ready(function() {
       $("#displaycrust").append(crust);
       $("#displaysize").append(size);
       $("#displaytopping").append(topping);
-      
+
       $("#yourorder").show();
       event.preventDefault();
   });
+
+  $('#orderme').click(function(){
+     var address = prompt("Where do you want the pizza delivered?");
+     alert("Your Pizza will be delivered at " + address);
+   });
+   $('#pickme').click(function(){
+      alert("Alright! Your order will be waiting for you when you get here :)")
+   });
+
 });
 
 // function Pizza(size, toppings, crust, ) {

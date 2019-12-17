@@ -6,7 +6,7 @@ function Pizza(size, toppings, crust, ) {
 //Jquery pick user input from form
 
 $(document).ready(function() {
-   $("#blanks form").submit(function(event) {
+   $("#order form").submit(function(event) {
       var sizeInput = document.getElementById("size");
       var size = sizeInput.options[sizeInput.selectedIndex].text;
 

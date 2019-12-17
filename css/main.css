@@ -1,3 +1,6 @@
+body{
+   font-family: 'Courier Prime', monospace;
+}
 header{
    background-image: url(../img/discobkg.jfif);
    background-size: cover;
@@ -5,9 +8,20 @@ header{
    margin-bottom: 2%;
 }
 #headertext{
-   color: white;
+
    text-align: center;
    padding: 10%;
+}
+#headerstyle{
+   margin-left: 30%;
+   width: fit-content;
+   border: 2px solid white;
+   border-radius: 50%;
+   padding: 3%;
+   background-color: white;
+}
+.btn{
+   border: 1px solid slategray;
 }
 #yourorder{
    display: none;

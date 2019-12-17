@@ -22,9 +22,8 @@ $(document).ready(function() {
       $("#displaycrust").append(crust);
       $("#displaysize").append(size);
       $("#displaytopping").append(topping);
-
-      $("#story").show();
-
+      
+      $("#yourorder").show();
       event.preventDefault();
   });
 });

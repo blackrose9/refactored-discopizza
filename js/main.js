@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   $('#orderme').click(function(){
      var address = prompt("Where do you want the pizza delivered?");
-     alert("Your Pizza will be delivered at " + address);
+     alert("Your Pizza will be delivered at " + address + "in 30 minutes");
    });
    $('#pickme').click(function(){
       alert("Alright! Your order will be waiting for you when you get here :)")

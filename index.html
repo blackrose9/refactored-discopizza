@@ -16,52 +16,50 @@
       </div>
       <img class="img-fluid col-md-6" src="./img/pizza.jpg">
    </header>
-   
-   <section class="container-fluid">
-      <div class="form-inline">
-         <label class="col-sm-12 col-md-3">Size</label>
-         <label class="col-sm-12 col-md-3">Toppings</label>
-         <label class="col-sm-12 col-md-3">Crust</label>
-         <label class="col-sm-12 col-md-3">How many do you want?</label>
-      </div>
-      <form id="order" class=" form-group form-inline">
-         
-         <select id="size" class="col-sm-12 col-md-3">
-            <option value="Small">Small K500</option>
-            <option value="Medium">Medium K700</option>
-            <option value="Large">Large K950</option>
-         </select>
-         
-         <select id="topping" class="col-sm-12 col-md-3">
-            <option value="veggie pizza">Vegetable</option>
-            <option value="hawaii pizza">Hawaiian</option>
-            <option value="beef pizza">Beef</option>
-            <option value="chicken pizza">Chicken</option>
-         </select>
-         
-         <select id="crust" class="col-sm-12 col-md-3">
-            <option value="crispy">Crispy</option>
-            <option value="stuffed">Stuffed</option>
-            <option value="glutenfree">Gluten-free</option>
-         </select>
-         <input type="number" placeholder="how many do you want?" id="qty" class="col-sm-12 col-md-3">
-         <input type="submit" id="submit" class="btn btn-light" value="Another?">
-      </form>
-      <article id="yourorder">
-         <h2>Your order:</h2>
-         <p>
-            <span id="displayqty"></span>
-            <span id="displaycrust"></span>
-            <span id="displaysize"></span>
-            <span id="displaytopping"></span>
-         </p>
-      </article>
-      <article class="form-inline">
-         <button id="orderme" type="button" class="btn btn-primary" value="Deliver Order">Delivery Order</button>
-         <button id="pickme" type="button" class="btn btn-info" value="PickUp Order">PickUp Order</button>
-      </article>
-   </section>
 
+   <div id="order" class="row justify-content">
+      <section id="orderform" class="col-md-8">
+         <h2>Place your order:</h2>
+         <form class="form-row">
+            <select id="size" class="custom-select col-auto my-1">
+               <option value="small">Small K500</option>
+               <option value="medium">Medium K700</option>
+               <option value="large">Large K950</option>
+            </select>
+            <select id="topping" class="custom-select col-auto my-1">
+               <option value="veggie">Vegetable</option>
+               <option value="hawaii">Hawaiian</option>
+               <option value="beef">Beef</option>
+               <option value="chicken">Chicken</option>
+            </select>
+            <select id="crust" class="custom-select col-auto my-1">
+               <option value="crispy">Crispy</option>
+               <option value="stuffed">Stuffed</option>
+               <option value="glutenfree">Gluten-free</option>
+            </select>
+            <input type="number" id="qty" class="col-auto my-1" placeholder="how many pizzas?" value="1">
+            <br/>
+            <input type="submit" id="submit" class="btn btn-light col-auto my-1" value="Add to Order">
+         </form>
+      </section>
+
+      <section id="ordersummary" class="col">
+         <h2>Your order:</h2>
+         <article id="yourorder">
+            <p>
+               <span id="displayqty"></span>
+               <span id="displaycrust"></span>
+               <span id="displaysize"></span>
+               <span id="displaytopping"></span>
+            </p>
+         </article>
+         <article class="form-inline">
+            <button id="orderme" type="button" class="btn btn-primary" value="Deliver Order">Delivery Order</button>
+            <button id="pickme" type="button" class="btn btn-info" value="PickUp Order">PickUp Order</button>
+         </article>
+      </section>
+   </div>
+   
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    <script src="./js/main.js"></script>
 </body>

@@ -1,5 +1,8 @@
 body{
    /* insert wooden table image here */
+   background-color: #E9ECEF;
+   background-image: url("../img/woodentable2.jpg");
+   background-size: cover;
 }
 .jumbotron{
    padding: 0.9%;
@@ -9,6 +12,29 @@ body{
    padding: 5%;
    padding-top: 15%;
 }
+#order{
+   width: 100vw;
+}
+/* Order Form CSS */
+#orderform{
+   margin: 2%;
+   padding: 2%;
+   background-color: #E9ECEF;
+}
+#submit{
+   margin-left: 2%;
+}
+/* Order Summary CSS */
+#ordersummary{
+   margin: 2% 2% 2% 0;
+   padding: 2%;
+   background-color: #E9ECEF;
+}
+
 #yourorder{
-   display: none;
+   margin-bottom: 60%;
+}
+
+button{
+   margin: auto;
 }

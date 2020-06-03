@@ -1,33 +1,41 @@
 $(document).ready(function() {
+   const orderItem = new Set();
+   const orderMap = new Map([]);
+   let itemNum=1;
+
    $("#submit").click(function(event) {
-      // var sizeInput = document.getElementById("size");
-      // var size = sizeInput.options[sizeInput.selectedIndex].text();
       var size = $("#size option:selected").val();
-
-      // var toppingInput = document.getElementById("topping");
-      // var topping = toppingInput.options[toppingInput.selectedIndex].text();
       var topping = $("#topping option:selected").val();
-
-      // var crustInput = document.getElementById("crust");
-      // var crust = crustInput.options[crustInput.selectedIndex].text();
       var crust = $("#crust option:selected").val();
-
       var qty = parseInt ($("input#qty").val());
 
-      // alert(size);
-      // alert(topping);
-      // alert(crust);
-      // alert(qty);
-      
-      //Jquery append users order
-      $("#displayqty").append(qty);
-      $("#displaycrust").append(crust);
-      $("#displaysize").append(size);
-      $("#displaytopping").append(topping);
+      addOrderItem(size, topping, crust, qty);
+      // orderItem.clear();
+
+      (allOrders=()=>{
+         orderMap.forEach((value) => {
+            $("#orders").append(value);
+            console.log(value);
+         });
+      })()
 
       $("#yourorder").show();
       event.preventDefault();
   });
+
+  addOrderItem = (size, topping, crust, qty) => {
+   orderItem.add(qty);
+   orderItem.add(crust);
+   orderItem.add(size);
+   orderItem.add(topping);
+   addToMap(orderItem);
+  }
+
+  addToMap = (orderItem) => {
+     let item = orderItem;
+      orderMap.set((itemNum+1),item);
+      // orderItem.clear();
+  }
 
   $('#orderme').click(function(){
      var address = prompt("Where do you want the pizza delivered?");
@@ -39,9 +47,35 @@ $(document).ready(function() {
 
 });
 
-// function Pizza(size, toppings, crust, ) {
-//    this.crust = crust;
-//    this.size = size;
-//    this.toppings = toppings;
+   
+
+// deleteItem=()=>{
+//    orderItem.clear();
 // }
-//Jquery pick user input from form
+
+// let qty = 2;
+// let crust = 'thick';
+// let size = 'large';
+// let topping = 'mushroom';
+
+//    const orderItem = new Set();
+//    const orderMap = new Map([]);
+//    let itemNum=1;
+
+//       orderItem.add(qty);
+//       orderItem.add(crust);
+//       orderItem.add(size);
+//       orderItem.add(topping);
+
+//       orderMap.set((itemNum),orderItem);
+//       orderMap.set((itemNum)+1,orderItem);
+
+//       (allOrders=()=>{
+//          orderMap.forEach((value, key) => {
+//             value;
+//             key;
+//          });
+//       })()
+
+//       orderMap;
+//       orderItem;

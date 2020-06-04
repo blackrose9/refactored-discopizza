@@ -13,10 +13,13 @@ $(document).ready(function() {
       // orderItem.clear();
 
       (allOrders=()=>{
-         orderMap.forEach((value) => {
-            $("#orders").append(value);
-            console.log(value);
+         orderMap.forEach(value => {
+            
+            document.getElementById("orders").value = "yes"
+            // $("#orders").set(`<li>${value}</li>`);
+            // console.log(value);
          });
+         console.log(orderMap);
       })()
 
       $("#yourorder").show();
@@ -24,17 +27,20 @@ $(document).ready(function() {
   });
 
   addOrderItem = (size, topping, crust, qty) => {
-   orderItem.add(qty);
-   orderItem.add(crust);
-   orderItem.add(size);
-   orderItem.add(topping);
-   addToMap(orderItem);
+     if (orderItem.size>0){
+        orderItem.clear();
+     }
+      itemNum+=1
+      orderItem.add(qty);
+      orderItem.add(crust);
+      orderItem.add(size);
+      orderItem.add(topping);
+      addToMap(orderItem);
   }
 
   addToMap = (orderItem) => {
-     let item = orderItem;
-      orderMap.set((itemNum+1),item);
-      // orderItem.clear();
+     const item = orderItem;
+      orderMap.set(itemNum,item);
   }
 
   $('#orderme').click(function(){
@@ -67,8 +73,10 @@ $(document).ready(function() {
 //       orderItem.add(size);
 //       orderItem.add(topping);
 
-//       orderMap.set((itemNum),orderItem);
+//       orderMap.set(itemNum,orderItem);
 //       orderMap.set((itemNum)+1,orderItem);
+//       orderMap.set((itemNum)+2,orderItem);
+//       orderMap.set((itemNum)+3,orderItem);
 
 //       (allOrders=()=>{
 //          orderMap.forEach((value, key) => {

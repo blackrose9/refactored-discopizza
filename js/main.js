@@ -70,8 +70,8 @@ $(document).ready(function() {
 //   *********************************************************************
 
   $('#orderme').click(function(){
-     var address = prompt("Where do you want the pizza delivered?");
-     alert("Your Pizza will be delivered at " + address + "in 30 minutes");
+     let address = prompt("Where would you like your order to be delivered?");
+     alert("Your order will be delivered at " + address + " in 30 minutes");
    });
    $('#pickme').click(function(){
       alert("Alright! Your order will be waiting for you when you get here :)")

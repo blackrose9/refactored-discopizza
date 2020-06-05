@@ -21,7 +21,7 @@ $(document).ready(function() {
       
       // display on DOM using jquery
       $("#placeholder").text("")
-      $("#orders").append(`<li>${numberOfPizzas} ${pizzaSize} ${pizzaTopping} ${pizzaCrust}</li>`);
+      $("#orders").append(`<li>${numberOfPizzas} ${pizzaSize} ${pizzaTopping} pizza(s) ${pizzaCrust} crust</li>`);
       console.log(totalprice);
       $("#total").text(`KSH ${totalprice}`);
 
@@ -52,13 +52,13 @@ $(document).ready(function() {
 
   calculateTotal = (pizzaSize, numberOfPizzas) => {
    switch(pizzaSize){
-      case 'small' :
+      case 'Small' :
          totalOrderPrice+=(500*numberOfPizzas);
          break;
-      case 'medium' :
+      case 'Medium' :
          totalOrderPrice+=(700*numberOfPizzas);
          break;
-      case 'large' :
+      case 'Large' :
          totalOrderPrice+=(950*numberOfPizzas);
          break;
       default:

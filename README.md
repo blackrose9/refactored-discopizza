@@ -8,10 +8,26 @@ Place your order and have it either delivered to you or you can pick it up from 
 
 ## To-Do
 * Fix known bugs using ES6 features to simplify how the functionality is achieved.
-* Add order summary section displaying order total and delivery options and such.
+* Make order items into individual cards. Nice and pretty looking.
+* Add delete function so that an item can be removed from the order
 * Add payment option.
 
 ## Known Bugs
-* Multiple orders display right next to each other.[Warning: can cause confusion!]
-* Total Price not working yet
+* Doesn't stop you from choosing delivery or pickup even when there is no item in order.
+* And extra long order will extend the page. To-Do make this extension somehow aesthetically pleasing.
 * The Pizza might be a little bit tempting
+
+## How it looks
+### Live Site - Experience the app for yourself
+https://blackrose9.github.io/refactored-discopizza/
+
+### Landing Page
+![LandingPage](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/jumbotron.PNG)
+### Order a Pizza
+![APizza](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/orderapizza.PNG)
+### Maybe Two Pizza's
+![TwoPizzas](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/maybetwo.PNG)
+### Want your order delivered? Tell us where.
+![Delivery](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/wantadelivery.PNG)
+### Want to pick it up yourself? That's cool too.
+![PickUp](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/wanttopickup.PNG)

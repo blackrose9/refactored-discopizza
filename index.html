@@ -22,24 +22,24 @@
          <h2>Place your order:</h2>
          <form class="form-row">
             <select id="size" class="custom-select col-auto my-1">
-               <option value="small">Small K500</option>
-               <option value="medium">Medium K700</option>
-               <option value="large">Large K950</option>
+               <option value="Small">Small K500</option>
+               <option value="Medium">Medium K700</option>
+               <option value="Large">Large K950</option>
             </select>
             <select id="topping" class="custom-select col-auto my-1">
-               <option value="veggie">Vegetable</option>
-               <option value="hawaii">Hawaiian</option>
-               <option value="beef">Beef</option>
-               <option value="chicken">Chicken</option>
+               <option value="Veggie">Vegetable Topping</option>
+               <option value="Hawaii">Hawaiian Topping</option>
+               <option value="Beef">Beef Topping</option>
+               <option value="Chicken">Chicken Topping</option>
             </select>
             <select id="crust" class="custom-select col-auto my-1">
-               <option value="crispy">Crispy</option>
-               <option value="stuffed">Stuffed</option>
-               <option value="glutenfree">Gluten-free</option>
+               <option value="Crispy">Crispy Crust</option>
+               <option value="Stuffed">Stuffed Crust</option>
+               <option value="GlutenFree">Gluten-free Crust</option>
             </select>
-            <input type="number" id="qty" class="col-auto my-1" placeholder="how many pizzas?" value="1">
+            <input type="number" id="qty" class="col-auto my-1" placeholder="How many pizzas?" value="1">
             <br/>
-            <input type="submit" id="submit" class="btn btn-light col-auto my-1" value="Add to Order">
+            <input type="submit" id="submit" class="btn btn-light col-auto my-1" value="Add Pizza To Order">
          </form>
       </section>
 
@@ -47,13 +47,13 @@
          <h2>Your order:</h2>
          <article id="yourorder">
             <p>
-               <span id="displayqty"></span>
-               <span id="displaycrust"></span>
-               <span id="displaysize"></span>
-               <span id="displaytopping"></span>
+               <p id="placeholder">Nothing to show yet. Add a pizza to your order.</p>
+               <span id="orders"></span>
             </p>
+            <h2 id="total">KSH 0</h2>
          </article>
-         <article class="form-inline">
+         <hr/>
+         <article id="placeorder" class="form-inline">
             <button id="orderme" type="button" class="btn btn-primary" value="Deliver Order">Delivery Order</button>
             <button id="pickme" type="button" class="btn btn-info" value="PickUp Order">PickUp Order</button>
          </article>

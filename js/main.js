@@ -1,47 +1,80 @@
 $(document).ready(function() {
+   // declare variables to be used
+   const orderItem = [];
+   const orderMap = new Map([]);
+   let itemNum=0;
+   let totalOrderPrice = 0;
+
+//   ********************************************************************
+
    $("#submit").click(function(event) {
-      // var sizeInput = document.getElementById("size");
-      // var size = sizeInput.options[sizeInput.selectedIndex].text();
-      var size = $("#size option:selected").val();
+      // get input from user
+      var pizzaSize = $("#size option:selected").val();
+      var pizzaTopping = $("#topping option:selected").val();
+      var pizzaCrust = $("#crust option:selected").val();
+      var numberOfPizzas = parseInt ($("input#qty").val());
 
-      // var toppingInput = document.getElementById("topping");
-      // var topping = toppingInput.options[toppingInput.selectedIndex].text();
-      var topping = $("#topping option:selected").val();
-
-      // var crustInput = document.getElementById("crust");
-      // var crust = crustInput.options[crustInput.selectedIndex].text();
-      var crust = $("#crust option:selected").val();
-
-      var qty = parseInt ($("input#qty").val());
-
-      // alert(size);
-      // alert(topping);
-      // alert(crust);
-      // alert(qty);
+      // call method to add orders to map
+      addOrderItem(pizzaSize, pizzaTopping, pizzaCrust, numberOfPizzas);
+      // call calculatetotal method
+      let totalprice = calculateTotal(pizzaSize, numberOfPizzas);
       
-      //Jquery append users order
-      $("#displayqty").append(qty);
-      $("#displaycrust").append(crust);
-      $("#displaysize").append(size);
-      $("#displaytopping").append(topping);
+      // display on DOM using jquery
+      $("#placeholder").text("")
+      $("#orders").append(`<li>${numberOfPizzas} ${pizzaSize} ${pizzaTopping} pizza(s) ${pizzaCrust} crust</li>`);
+      console.log(totalprice);
+      $("#total").text(`KSH ${totalprice}`);
 
       $("#yourorder").show();
       event.preventDefault();
   });
 
+//   ********************************************************************
+
+  addOrderItem = (pizzaSize, pizzaTopping, pizzaCrust, numberOfPizzas) => {
+     if (orderItem.pizzaSize>0){
+        orderItem.clear();
+     }
+      itemNum+=1
+      orderItem.push(numberOfPizzas);
+      orderItem.push(pizzaCrust);
+      orderItem.push(pizzaSize);
+      orderItem.push(pizzaTopping);
+      addToMap(orderItem);
+  }
+
+  addToMap = (orderItem) => {
+     const item = orderItem;
+      orderMap.set(itemNum,item);
+  }
+
+//   *********************************************************************
+
+  calculateTotal = (pizzaSize, numberOfPizzas) => {
+   switch(pizzaSize){
+      case 'Small' :
+         totalOrderPrice+=(500*numberOfPizzas);
+         break;
+      case 'Medium' :
+         totalOrderPrice+=(700*numberOfPizzas);
+         break;
+      case 'Large' :
+         totalOrderPrice+=(950*numberOfPizzas);
+         break;
+      default:
+         console.log(`Sorry we do not hold ${pizzaSize} size.`);
+   }
+   return totalOrderPrice;
+  }
+
+//   *********************************************************************
+
   $('#orderme').click(function(){
-     var address = prompt("Where do you want the pizza delivered?");
-     alert("Your Pizza will be delivered at " + address + "in 30 minutes");
+     let address = prompt("Where would you like your order to be delivered?");
+     alert("Your order will be delivered at " + address + " in 30 minutes");
    });
    $('#pickme').click(function(){
       alert("Alright! Your order will be waiting for you when you get here :)")
    });
 
 });
-
-// function Pizza(size, toppings, crust, ) {
-//    this.crust = crust;
-//    this.size = size;
-//    this.toppings = toppings;
-// }
-//Jquery pick user input from form

@@ -22,12 +22,12 @@ Place your order and have it either delivered to you or you can pick it up from 
 https://blackrose9.github.io/refactored-discopizza/
 
 ### Landing Page
-![LandingPage](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/jumbotron.PNG)
+![LandingPage](https://github.com/blackrose9/refactored-discopizza/blob/master/img/howitlooks/jumbotron.PNG)
 ### Order a Pizza
-![APizza](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/orderapizza.PNG)
+![APizza](https://github.com/blackrose9/refactored-discopizza/blob/master/img/howitlooks/orderapizza.PNG)
 ### Maybe Two Pizza's
-![TwoPizzas](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/maybetwo.PNG)
+![TwoPizzas](https://github.com/blackrose9/refactored-discopizza/blob/master/img/howitlooks/maybetwo.PNG)
 ### Want your order delivered? Tell us where.
-![Delivery](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/wantadelivery.PNG)
+![Delivery](https://github.com/blackrose9/refactored-discopizza/blob/master/img/howitlooks/wantadelivery.PNG)
 ### Want to pick it up yourself? That's cool too.
-![PickUp](https://github.com/blackrose9/refactored-discopizza/blob/feature/jsfunctionality/img/howitlooks/wanttopickup.PNG)
+![PickUp](https://github.com/blackrose9/refactored-discopizza/blob/master/img/howitlooks/wanttopickup.PNG)

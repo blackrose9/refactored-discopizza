@@ -8,10 +8,10 @@ Place your order and have it either delivered to you or you can pick it up from 
 
 ## To-Do
 * Fix known bugs using ES6 features to simplify how the functionality is achieved.
-* Add order summary section displaying order total and delivery options and such.
+* Add delete function so that an item can be removed from the order
 * Add payment option.
 
 ## Known Bugs
-* Multiple orders display right next to each other.[Warning: can cause confusion!]
-* Total Price not working yet
+* Doesn't stop you from choosing delivery or pickup even when there is no item in order.
+* And extra long order will extend the page. To-Do make this extension somehow aesthetically pleasing.
 * The Pizza might be a little bit tempting

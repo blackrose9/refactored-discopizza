@@ -39,7 +39,7 @@
             </select>
             <input type="number" id="qty" class="col-auto my-1" placeholder="how many pizzas?" value="1">
             <br/>
-            <input type="submit" id="submit" class="btn btn-light col-auto my-1" value="Add to Order">
+            <input type="submit" id="submit" class="btn btn-light col-auto my-1" value="Add Pizza To Order">
          </form>
       </section>
 
@@ -47,11 +47,13 @@
          <h2>Your order:</h2>
          <article id="yourorder">
             <p>
+               <p id="placeholder">Nothing to show yet. Add a pizza to your order.</p>
                <span id="orders"></span>
             </p>
+            <h2 id="total">KSH 0</h2>
          </article>
-         
-         <article class="form-inline">
+         <hr/>
+         <article id="placeorder" class="form-inline">
             <button id="orderme" type="button" class="btn btn-primary" value="Deliver Order">Delivery Order</button>
             <button id="pickme" type="button" class="btn btn-info" value="PickUp Order">PickUp Order</button>
          </article>

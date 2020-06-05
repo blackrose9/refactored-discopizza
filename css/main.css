@@ -1,28 +1,40 @@
 body{
-   font-family: 'Courier Prime', monospace;
-}
-header{
-   background-image: url(../img/discobkg.jfif);
+   /* insert wooden table image here */
+   background-color: #E9ECEF;
+   background-image: url("../img/woodentable.jpg");
    background-size: cover;
-   height: 100%;
-   margin-bottom: 2%;
 }
-#headertext{
-
+.jumbotron{
+   padding: 0.9%;
+}
+.container{
    text-align: center;
-   padding: 10%;
+   padding: 5%;
+   padding-top: 15%;
 }
-#headerstyle{
-   margin-left: 40%;
-   width: fit-content;
-   border: 2px solid white;
-   border-radius: 50%;
-   padding: 3%;
-   background-color: white;
+#order{
+   width: 100vw;
 }
-.btn{
-   border: 1px solid slategray;
+/* Order Form CSS */
+#orderform{
+   margin: 2%;
+   padding: 2%;
+   background-color: #E9ECEF;
 }
-#yourorder{
-   display: none;
+#submit{
+   margin-left: 2%;
+}
+/* Order Summary CSS */
+#ordersummary{
+   margin: 2% 2% 2% 0;
+   padding: 2%;
+   background-color: #E9ECEF;
+}
+
+#pickme{
+   margin-left: 10px;
+}
+
+button{
+   margin: auto;
 }
